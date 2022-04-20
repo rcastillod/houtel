@@ -13,6 +13,79 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+
+    <header class="header">
+        <div class="container">
+            <div class="site-logo">
+                <a href="index.html">
+                    <img src="assets/img/logo.png" width="150" alt="Houtel">
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-section container">
+        <div class="heading-title">
+            <p>Disfruta de los paisajes de</p>
+            <h1>Chile</h1>
+            <a href="#" class="btn btn--positive btn--large">Más Destinos</a>
+        </div>
+        <div class="form-wrapper">
+            <form class="form" action="">
+                <div class="form__item">
+                    <label for="lugar">Lugar u Hotel</label>
+                    <input type="text" name="lugar" id="lugar" placeholder="Escribe tu destino">
+                </div>
+                <div class="form__item">
+                    <label for="llegada">Fecha de llegada</label>
+                    <div class="select">
+                        <select name="llegada" id="llegada">
+                            <option value="0" selected>Busca tu llegada</option>
+                            <option value="1">20 abril</option>
+                            <option value="2">22 abril</option>
+                            <option value="3">21 abril</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form__item">
+                    <label for="salida">Fecha de salida</label>
+                    <div class="select">
+                        <select name="salida" id="salida">
+                            <option value="0" selected>Busca tu salida</option>
+                            <option value="1">20 abril</option>
+                            <option value="2">22 abril</option>
+                            <option value="3">21 abril</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form__item">
+                    <label for="alojamiento">Tipo de alojamiento</label>
+                    <div class="select">
+                        <select name="alojamiento" id="alojamiento">
+                            <option value="0" selected>Cantidad de huéspedes</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form__item">
+                    <label for="habitaciones">Tipo de habitación</label>
+                    <div class="select">
+                        <select name="habitaciones" id="habitaciones">
+                            <option value="0" selected>Cantidad de habitaciones</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form__item">
+                    <input class="btn btn--default" type="submit" value="Buscar">
+                </div>
+            </form>
+        </div>
+    </main>
     
 </body>
 </html>

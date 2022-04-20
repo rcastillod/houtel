@@ -1,0 +1,21 @@
+.main-section {
+    display: flex;
+    flex-direction: column;
+    gap: 3.125rem;
+    padding-block-start: 6.25rem;
+    padding-block-end: 3.125rem;
+}
+
+.heading-title {
+    text-align: center;
+
+    p {
+        font-size: map-get($sizes, '2x-large' );
+        margin: 0;
+    }
+
+    h1 {
+        font-size: map-get($sizes, '4x-large' );
+        margin: 0;
+    }
+}

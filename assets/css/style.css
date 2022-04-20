@@ -1,0 +1,292 @@
+/* -------------------------------------------------------------------------- */
+/*                                  Abstracts                                 */
+/* -------------------------------------------------------------------------- */
+/* ------ Colors ------ */
+/* ------ Fonts ------ */
+/* ------ Container ------ */
+/* ------ Breakpoints ------ */
+/* ------ Border ------ */
+/* ------ Breakpoints ------ */
+/* -------------------------------------------------------------------------- */
+/*                                   Vendors                                  */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                    Base                                    */
+/* -------------------------------------------------------------------------- */
+body {
+  background-image: url(../img/background.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  color: #FFFFFF;
+}
+
+.container {
+  margin-inline: auto;
+  width: min(100% - 4rem, 82.5rem);
+}
+@media (min-width: 768px) {
+  .container {
+    width: min(100% - 9.375rem, 82.5rem);
+  }
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Playfair Display", serif;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+*::before,
+*::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* -------------------------------------------------------------------------- */
+/*                                   Layout                                   */
+/* -------------------------------------------------------------------------- */
+.header {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 10vh;
+  width: 100%;
+}
+
+.main-section {
+  display: flex;
+  flex-direction: column;
+  gap: 3.125rem;
+  padding-block-start: 6.25rem;
+  padding-block-end: 3.125rem;
+}
+
+.heading-title {
+  text-align: center;
+}
+.heading-title p {
+  font-size: 1.875rem;
+  margin: 0;
+}
+.heading-title h1 {
+  font-size: 8.125rem;
+  margin: 0;
+}
+
+.form-wrapper {
+  background-color: #FFFFFF;
+  border-radius: 0.1875em;
+  padding: 1.5625em 2.5em;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+.form__item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3125rem;
+}
+.form__item label {
+  color: #818486;
+}
+.form__item input[type=submit] {
+  align-self: center;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                 Components                                 */
+/* -------------------------------------------------------------------------- */
+input,
+select {
+  border: 1px solid #818486;
+  border-radius: 0.1875em;
+  color: #BABABA;
+  padding: 0.625em;
+}
+input::placeholder,
+select::placeholder {
+  color: #BABABA;
+}
+input::-webkit-input-placeholder,
+select::-webkit-input-placeholder {
+  color: #BABABA;
+}
+input::-moz-placeholder,
+select::-moz-placeholder {
+  color: #BABABA;
+}
+input:-ms-input-placeholder,
+select:-ms-input-placeholder {
+  color: #BABABA;
+}
+input::-ms-input-placeholder,
+select::-ms-input-placeholder {
+  color: #BABABA;
+}
+input::placeholder,
+select::placeholder {
+  color: #BABABA;
+}
+
+.select {
+  display: grid;
+  grid-template-areas: "select";
+  align-items: center;
+  background-color: #FFFFFF;
+  background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
+  border: 1px solid #818486;
+  border-radius: 0.1875em;
+  cursor: pointer;
+  padding: 0.625em;
+  width: 100%;
+}
+.select::after {
+  content: "";
+  justify-self: end;
+  width: 0.8em;
+  height: 0.5em;
+  background-color: #818486;
+  clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+  grid-area: select;
+}
+
+select {
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  cursor: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  grid-area: select;
+  margin: 0;
+  padding: 0 1em 0 0;
+  line-height: inherit;
+  outline: none;
+  width: 100%;
+}
+select::-ms-expand {
+  display: none;
+}
+
+.btn {
+  color: #FFFFFF;
+  background-color: #44BBA4;
+  border: 0;
+  border-radius: 0.1875em;
+  cursor: pointer;
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.0625rem;
+  padding: 0.625em 0.9375em;
+  text-decoration: none;
+  transition: background 250ms ease-in-out;
+}
+.btn--default {
+  background-color: #E94F37;
+}
+.btn--default:hover {
+  background-color: #EF7F6D;
+}
+.btn--positive {
+  background-color: #44BBA4;
+}
+.btn--positive:hover {
+  background-color: #66C7B4;
+}
+.btn--medium {
+  padding: 1.25em;
+}
+.btn--large {
+  padding-block: 0.9375em;
+  padding-inline: 2.8125em;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                    Pages                                   */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                   Themes                                   */
+/* -------------------------------------------------------------------------- */
+
+/*# sourceMappingURL=style.css.map */

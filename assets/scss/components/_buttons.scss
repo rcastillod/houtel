@@ -1,0 +1,39 @@
+.btn {
+    color: map-get($white-color, '900' );
+    background-color: map-get($secondary-color, '900' );
+    border: 0;
+    border-radius: $br;
+    cursor: pointer;
+    font-size: map-get($sizes, x-large );
+    font-weight: map-get($text-fw, bold);
+    letter-spacing: .0625rem;
+    padding: .625em .9375em;
+    text-decoration: none;
+    transition: background 250ms ease-in-out;
+
+    // Color
+    &--default {
+        background-color: map-get($primary-color, '900' );
+        // Hover
+        &:hover {
+            background-color: map-get($primary-color , '800' )
+        }
+    }
+    &--positive {
+        background-color: map-get($secondary-color, '900' );
+        // Hover
+        &:hover {
+            background-color: map-get($secondary-color , '800' )
+        }
+    }
+
+    // Sizes
+    &--medium {
+        padding: 1.25em;
+    }
+    &--large {
+        padding-block: .9375em;
+        padding-inline: 2.8125em;
+    }
+    
+}

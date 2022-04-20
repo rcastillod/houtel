@@ -1,0 +1,70 @@
+input,
+select {
+    border: 1px solid map-get($black-color, '700');
+    border-radius: $br;
+    color: map-get($white-color, '700');
+    padding: .625em;
+
+    &::placeholder {
+        color: map-get($white-color, '700');
+    }
+    &::-webkit-input-placeholder {
+        color: map-get($white-color, '700');
+    }
+    &::-moz-placeholder {
+        color: map-get($white-color, '700');
+    }
+    &:-ms-input-placeholder {
+        color: map-get($white-color, '700');
+    }
+    &::-ms-input-placeholder {
+        color: map-get($white-color, '700');
+    }
+    &::placeholder {
+        color: map-get($white-color, '700');
+    }
+}
+
+.select {
+    display: grid;
+    grid-template-areas: 'select';
+    align-items: center;
+
+    background-color: map-get($white-color, '900');
+    background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
+    border: 1px solid map-get($black-color, '700');
+    border-radius: $br;
+    cursor: pointer;
+    padding: .625em;
+    width: 100%;
+
+    &::after {
+        content: '';
+        justify-self: end;
+        width: 0.8em;
+        height: 0.5em;
+        background-color: map-get($black-color, '700');
+        clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+        grid-area: select;
+    }
+
+}
+select {
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    cursor: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    grid-area: select;
+    margin: 0;
+    padding: 0 1em 0 0;
+    line-height: inherit;
+    outline: none;
+    width: 100%;
+
+    // Remove arrow for lower version of IE
+    &::-ms-expand {
+        display: none;
+    }
+}

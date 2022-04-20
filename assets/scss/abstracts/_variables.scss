@@ -22,7 +22,7 @@ $black-color: (
 );
 
 // White Color
-$black-color: (
+$white-color: (
     '900': #FFFFFF,
     '800': #E8E8E8,
     '700': #BABABA,
@@ -47,17 +47,31 @@ $sizes: (
 );
 
 // Weights
-$text-font: (
+$text-fw: (
     'bold': 700,
     'semi-bold': 600,
     'regular': 400
 );
     
-$heading-font: (
+$heading-fw: (
     'bold': 700
+);
+
+/* ------ Container ------ */
+
+// Max Width
+$max-width: 82.5rem;
+
+/* ------ Breakpoints ------ */
+
+$breakpoints: (
+    'small': 576px,
+    'medium': 768px,
+    'large': 992px,
+    'xl': 1200px,
 );
 
 /* ------ Border ------ */
 
 // Radius
-$br: .3125em;
+$br: .1875em;
