@@ -1,0 +1,63 @@
+/* ------ Colors ------ */
+
+// Primary Color
+$primary-color: (
+    '900': #E94F37,
+    '800': #EF7F6D,
+    '700': #F7BFB6,
+);
+
+// Secondary Color
+$secondary-color: (
+    '900': #44BBA4,
+    '800': #66C7B4,
+    '700': #88D3C5,
+);
+
+// Black Color
+$black-color: (
+    '900': #393E41,
+    '800': #5D6163,
+    '700': #818486,
+);
+
+// White Color
+$black-color: (
+    '900': #FFFFFF,
+    '800': #E8E8E8,
+    '700': #BABABA,
+);
+
+/* ------ Fonts ------ */
+
+// Families
+$text-ff: 'Open Sans', sans-serif;
+$heading-ff: 'Playfair Display', serif;
+
+// Sizes
+$sizes: (
+    '4x-large': 8.125rem,
+    '3x-large': 6.25rem,
+    '2x-large': 1.875rem,
+    'x-large': 1.25rem,
+    'large': 1.125rem,
+    'medium': 1rem,
+    'small': .875rem,
+    'x-small': .75rem,
+);
+
+// Weights
+$text-font: (
+    'bold': 700,
+    'semi-bold': 600,
+    'regular': 400
+);
+    
+$heading-font: (
+    'bold': 700
+);
+
+/* ------ Border ------ */
+
+// Radius
+$br: .3125em;
